@@ -1,0 +1,89 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    text-align: center;
+}
+
+.typewriter {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+}
+
+.line {
+    font-size: 1.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white;
+    width: 0;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    animation: typing 2.5s steps(40, end) forwards, blink 0.7s infinite;
+}
+
+.line:last-child {
+    animation: typing 2.5s steps(40, end) forwards, blink 0.7s infinite 2.5s;
+}
+
+.line.done {
+    border-right: none;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.rocks {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.rock {
+    position: absolute;
+    width: 80px;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: auto;
+}
+
+.rock:hover {
+    transform: scale(2);
+}
+
+.rock1 { top: 60%; left: -10%; transform: rotate(-10deg); }
+.rock2 { top: -7%; right: 40%; transform: rotate(8deg); }
+.rock3 { bottom: 80%; left: 10%; transform: rotate(-5deg); }
+.rock4 { bottom: 93%; right: 63%; transform: rotate(7deg); }
+.rock5 { top: 64%; left: 5%; transform: rotate(-6deg); }
+.rock6 { top: 15%; right: 15%; transform: rotate(5deg); }
+.rock7 { bottom: 30%; left: 70%; transform: rotate(-8deg); }
+.rock8 { bottom: 78%; right: 100%; transform: rotate(4deg); }
+.rock9 { top: 15%; left: -15%; transform: rotate(9deg); }
+.rock10 { top: 13%; right: 28%; transform: rotate(6deg); }
+.rock11 { bottom: -3%; left: 30%; transform: rotate(-4deg); }
+.rock12 { bottom: 15%; right: 40%; transform: rotate(5deg); }
